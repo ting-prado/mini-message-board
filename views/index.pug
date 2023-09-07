@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  .cont
+    h1 The world wants to hear from you! Say something.
+    include form
+    .messages
+      ul
+        each item in messages
+          include item

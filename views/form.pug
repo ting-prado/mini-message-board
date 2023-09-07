@@ -1,0 +1,9 @@
+form(method="POST" action="/new")
+  .labels
+    div
+      label Name:
+      input(type="text" name="username")
+    div
+      label Your message:
+      textarea(name="message" rows="3" required)
+  button Send Message

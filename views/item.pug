@@ -1,0 +1,6 @@
+li.message
+  div.block=item.username[0].toUpperCase()
+  div
+    h4=item.username
+    p.date=format(item.timestamp, 'EEE LLL. M, yyyy h:mm aaa')
+    p.body=item.message

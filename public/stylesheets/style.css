@@ -1,0 +1,154 @@
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Handlee&family=Pacifico&family=Sofia&display=swap");
+
+:root {
+	--prim-color: #c05805;
+	--sub-color: goldenrod;
+	--ter-color: #eee89b;
+	--border-color: #2e2300;
+	--h1-font: "Pacifico", cursive;
+	--labels-font: "Courgette", cursive;
+	--body-font: "Handlee", cursive;
+	--name-font: "Sofia", cursive;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	padding: 30px;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+	background-color: var(--prim-color);
+	color: var(--border-color);
+}
+
+a {
+	color: #00b7ff;
+}
+
+h1 {
+	text-align: center;
+	font-size: 26px;
+	margin-bottom: 1rem;
+	font-family: var(--h1-font);
+}
+
+h4 {
+	font-size: 15px;
+}
+
+form {
+	text-align: end;
+}
+
+label {
+	font-family: var(--labels-font);
+	font-size: 16px;
+}
+
+button {
+	padding: 0.5rem 2rem;
+	background-color: var(--ter-color);
+	border: 1px solid var(--border-color);
+	cursor: pointer;
+	font-weight: bold;
+	color: inherit;
+	font-family: var(--labels-font);
+}
+
+li {
+	list-style-type: none;
+}
+
+.cont {
+	border: 10px double var(--border-color);
+	padding: 1rem 1.5rem;
+	width: 55%;
+	margin: 0 auto;
+	max-height: 93vh;
+	overflow-y: auto;
+	background: var(--sub-color);
+}
+
+.labels > div {
+	display: grid;
+	grid-template-columns: 15% 85%;
+	align-items: center;
+	margin-bottom: 0.5rem;
+	text-align: start;
+}
+
+.labels div > :nth-child(2) {
+	background: var(--ter-color);
+	border: 1px solid var(--border-color);
+	padding: 0.25rem;
+}
+
+.labels div > :nth-child(2):focus {
+	outline: none;
+}
+
+.messages {
+	padding: 0.5rem;
+	width: 100%;
+	margin-top: 2rem;
+	border: 1px solid var(--border-color);
+	background: var(--ter-color);
+}
+
+.messages > ul {
+	display: flex;
+	flex-direction: column;
+	gap: 1.5rem;
+}
+
+li.message {
+	display: grid;
+	grid-template-columns: 36px 1fr;
+	column-gap: 0.5rem;
+}
+
+.block {
+	height: 36px;
+	width: 36px;
+	border: 1px solid var(--border-color);
+	font-size: 21px;
+	text-align: center;
+	background: var(--sub-color);
+}
+
+h4,
+.block {
+	font-weight: bold;
+	font-family: var(--name-font);
+}
+
+p.date {
+	font-size: 12px;
+	margin-bottom: 5px;
+	font-family: var(--body-font);
+}
+
+.labels div > :nth-child(2),
+p.body {
+	font-family: var(--body-font);
+	font-size: 16px;
+}
+
+@media screen and (max-width: 992px) {
+	label {
+		margin-bottom: 2px;
+	}
+
+	button {
+		width: 100%;
+		padding: 0.4rem;
+	}
+
+	.labels > div {
+		grid-template-columns: 100%;
+		margin-bottom: 0.8rem;
+	}
+}
